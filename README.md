@@ -27,7 +27,10 @@
 ## <a id="oop-principles">⚖️ OOP Principles Used</a>
 
 ### 🔐 Encapsulation
-All calculator logic (state, current expression, and UI behavior) is encapsulated inside the `Form1` class. Fields like `expression`, `resultValue`, and flags like `justEvaluated` are private and managed only through methods.
+
+✅ In This Project:
+The Form1 class encapsulates calculator logic and UI state.
+Fields like resultValue, expression, and justEvaluated are marked private, and their access is managed only through methods like Btn_equal_Click() and NumberButton_Click().
 
 ### 📁 Code Reference:
 ```
@@ -50,13 +53,10 @@ private void Btn_equal_Click(object sender, EventArgs e)
 ```
 
 ### 📦 Abstraction
-UI components delegate behavior to centralized logic methods.
 
-For example:
-
-All number buttons call NumberButton_Click.
-
-Operators like +, -, ×, ÷ call Operator_Click.
+✅ In This Project:
+Button click behavior is abstracted through shared handler methods like NumberButton_Click and Operator_Click.
+This hides the complexity of UI logic and makes the code easier to maintain.
 
 ### 📁 Code Reference:
 ```
@@ -78,7 +78,9 @@ private void UpdateExpressionDisplay()
 ```
 
 ### 🧠 Event-Driven Logic
-The calculator registers all button click events at runtime using the `RegisterEvents()` method, ensuring maintainable and scalable code.
+
+✅ In This Project:
+All button click events are registered dynamically in RegisterEvents(), which makes the code scalable and centralized.
 
 ### 📁 Code Reference:
 ```

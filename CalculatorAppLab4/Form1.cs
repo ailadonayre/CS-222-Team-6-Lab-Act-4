@@ -18,7 +18,6 @@ namespace CalculatorAppLab4
         private string expression = "";
         private bool justEvaluated = false;
 
-
         public Form1()
         {
             InitializeComponent();
@@ -79,15 +78,16 @@ namespace CalculatorAppLab4
             UpdateExpressionDisplay();
         }
 
-
-
-
         private void Operator_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             string op = button.Text;
 
-            if (justEvaluated)
+            if (op == "-" && textBox1.Text == "0")
+            {
+                expression += "-(";
+            }
+            else if (justEvaluated)
             {
                 expression = textBox1.Text + op;
                 justEvaluated = false;
@@ -101,7 +101,6 @@ namespace CalculatorAppLab4
             isOperationPerformed = true;
             UpdateExpressionDisplay();
         }
-
 
         private void Btn_equal_Click(object sender, EventArgs e)
         {
@@ -134,8 +133,6 @@ namespace CalculatorAppLab4
             }
         }
 
-
-
         private void Btn_c_Click(object sender, EventArgs e)
         {
             textBox1.Text = "0";
@@ -160,8 +157,6 @@ namespace CalculatorAppLab4
             UpdateExpressionDisplay();
         }
 
-
-
         private void Btn_del_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "0" && textBox1.Text.Length > 0)
@@ -180,8 +175,6 @@ namespace CalculatorAppLab4
             UpdateExpressionDisplay();
         }
 
-
-
         private void Btn_sign_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(textBox1.Text) || textBox1.Text == "0")
@@ -191,6 +184,11 @@ namespace CalculatorAppLab4
             {
                 value = -value;
                 string newValue = value.ToString();
+
+                if (value < 0)
+                {
+                    newValue = "(" + newValue + ")";
+                }
 
                 int i = expression.Length - 1;
                 while (i >= 0 && (char.IsDigit(expression[i]) || expression[i] == '.' || expression[i] == '-'))

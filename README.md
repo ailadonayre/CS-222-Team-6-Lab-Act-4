@@ -28,6 +28,8 @@
 
 ### 🔐 Encapsulation
 
+Restricting access to internal state and exposing only what is necessary through methods.
+
 ✅ In This Project:
 The Form1 class encapsulates calculator logic and UI state.
 Fields like resultValue, expression, and justEvaluated are marked private, and their access is managed only through methods like Btn_equal_Click() and NumberButton_Click().
@@ -54,6 +56,8 @@ private void Btn_equal_Click(object sender, EventArgs e)
 
 ### 📦 Abstraction
 
+Hiding implementation details and exposing a simplified interface.
+
 ✅ In This Project:
 Button click behavior is abstracted through shared handler methods like NumberButton_Click and Operator_Click.
 This hides the complexity of UI logic and makes the code easier to maintain.
@@ -78,6 +82,8 @@ private void UpdateExpressionDisplay()
 ```
 
 ### 🧠 Event-Driven Logic
+
+UI components react to user actions through event handlers.
 
 ✅ In This Project:
 All button click events are registered dynamically in RegisterEvents(), which makes the code scalable and centralized.

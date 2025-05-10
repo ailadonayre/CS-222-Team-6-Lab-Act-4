@@ -29,11 +29,66 @@
 ### 🔐 Encapsulation
 All calculator logic (state, current expression, and UI behavior) is encapsulated inside the `Form1` class. Fields like `expression`, `resultValue`, and flags like `justEvaluated` are private and managed only through methods.
 
+```
+
+private double resultValue = 0;
+private string operationPerformed = "";
+private bool isOperationPerformed = false;
+private string expression = "";
+private bool justEvaluated = false;
+
+```
+These fields are modified using event handlers like:
+
+```
+
+private void NumberButton_Click(object sender, EventArgs e)
+private void Btn_equal_Click(object sender, EventArgs e)
+
+```
+
 ### 📦 Abstraction
-UI buttons (numbers, operators) use delegated methods like `NumberButton_Click` and `Operator_Click`, abstracting the click behavior through centralized functions.
+UI components delegate behavior to centralized logic methods.
+
+For example:
+
+All number buttons call NumberButton_Click.
+
+Operators like +, -, ×, ÷ call Operator_Click.
+
+```
+
+btn_1.Click += NumberButton_Click;
+btn_add.Click += Operator_Click;
+
+```
+
+This hides implementation detail and allows buttons to behave similarly with minimal repetition.
+
+Also, display alignment logic is abstracted:
+
+```
+
+private void UpdateExpressionDisplay()
+
+```
 
 ### 🧠 Event-Driven Logic
 The calculator registers all button click events at runtime using the `RegisterEvents()` method, ensuring maintainable and scalable code.
+
+```
+private void RegisterEvents()
+{
+    btn_0.Click += NumberButton_Click;
+    // ...
+    btn_add.Click += Operator_Click;
+    // ...
+}
+
+```
+
+This improves maintainability and scalability, making it easy to manage or extend event behavior from one place.
+
 
 ## <a id="how-to-run">⚙️ How to Run</a>
 

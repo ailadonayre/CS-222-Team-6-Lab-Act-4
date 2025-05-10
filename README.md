@@ -1,6 +1,7 @@
 <p align="center">
   <img src="images/calcu-ban.png" style="max-width: 600px; height: auto;" alt="DigitalDiary">
 </p>
+
 ## 🧮 About
 **GUI Calculator** is a Windows Forms application built using C#. It allows users to perform basic arithmetic operations through a user-friendly interface. This calculator supports real-time expression building, sign switching, decimal inputs, and error handling—all while showcasing core object-oriented principles and event-driven programming.
 

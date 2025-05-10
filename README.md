@@ -10,7 +10,7 @@
 - [OOP Principles](#oop-principles)
 - [How to Run](#how-to-run)
 - [File Structure](#file-structure)
-- [Screenshots](#screenshots)
+- [Project Screenshots](#screenshots)
 - [Members](#members)
 - [Acknowledgements](#acknowledgements)
 
@@ -133,7 +133,7 @@ This improves maintainability and scalability, making it easy to manage or exten
 
 ---
 
-## <a id="screenshots">📸 Screenshots</a>
+## <a id="screenshots">📸 Project Screenshots</a>
 
 <p align="center">
   <img src="images/Initial.png" style="max-width: 600px; height: auto;" alt="Main UI">

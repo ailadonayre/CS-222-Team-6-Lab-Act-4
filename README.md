@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/calcu-ban.png" style="max-width: 600px; height: auto;" alt="DigitalDiary">
+  <img src="images/Calculator Main Banner.png" style="max-width: 600px; height: auto;" alt="DigitalDiary">
 </p>
 
 ## ⚡ About

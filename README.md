@@ -46,16 +46,19 @@ The calculator registers all button click events at runtime using the `RegisterE
 ## <a id="file-structure">📁 File Structure</a>
 
 ```
-├── bin/Debug
-│   └── CalculatorAppLab4.exe
-├── images/
-│   └── CalculatorBanner.jpg
-├── Form1.cs          # Contains full calculator logic and event handling
-├── Form1.Designer.cs # Auto-generated layout file
-├── Program.cs        # Application entry point
-├── CalculatorAppLab4.csproj
-├── README.md
+├── bin/Debug/                  # Output folder (created after build)
+│   └── CalculatorAppLab4.exe   # Executable after building
+├── Properties/
+│   ├── Resources.resx
+│   ├── Settings.settings
+├── Form1.cs                    # Contains full calculator logic and event handling
+├── Form1.Designer.cs          # Auto-generated layout file
+├── Form1.resx                 # Designer resources
+├── Program.cs                 # Application entry point
+├── CalculatorAppLab4.csproj   # Project file
 ```
+
+---
 
 ## <a id="screenshots">📸 Screenshots</a>
 

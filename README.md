@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/calcu-banner.png" style="max-width: 600px; height: auto;" alt="LOGO?">
+  <img src="images/calcu-banner.png" style="max-width: 400px; height: 300;" alt="LOGO?">
 </p>
 
 ## 🧮 About

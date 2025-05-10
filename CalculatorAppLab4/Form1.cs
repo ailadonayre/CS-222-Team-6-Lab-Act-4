@@ -180,28 +180,49 @@ namespace CalculatorAppLab4
             if (string.IsNullOrWhiteSpace(textBox1.Text) || textBox1.Text == "0")
                 return;
 
-            if (double.TryParse(textBox1.Text, out double value))
-            {
-                value = -value;
-                string newValue = value.ToString();
+            string currentText = textBox1.Text;
 
-                if (value < 0)
+            if (double.TryParse(currentText, out double value))
+            {
+                if (currentText.StartsWith("-"))
                 {
-                    newValue = "(" + newValue + ")";
+                    textBox1.Text = currentText.Substring(1);
+                    expression = expression.Substring(0, expression.Length - currentText.Length) + textBox1.Text;
+                }
+                else
+                {
+                    textBox1.Text = "-" + currentText;
+                    expression = expression.Substring(0, expression.Length - currentText.Length) + "(" + textBox1.Text + ")";
                 }
 
+                UpdateExpressionDisplay();
+            }
+            else
+            {
                 int i = expression.Length - 1;
-                while (i >= 0 && (char.IsDigit(expression[i]) || expression[i] == '.' || expression[i] == '-'))
+                while (i >= 0 && (char.IsDigit(expression[i]) || expression[i] == '.'))
                     i--;
 
                 string before = expression.Substring(0, i + 1);
-                string updatedExpression = before + newValue;
+                string after = expression.Substring(i + 1);
 
-                expression = updatedExpression;
-                textBox1.Text = newValue;
+                if (after.StartsWith("(") && after.EndsWith(")"))
+                {
+                    after = after.Substring(1, after.Length - 2);
+                    textBox1.Text = "-" + after;
+                    expression = before + "(" + textBox1.Text + ")";
+                }
+                else
+                {
+                    textBox1.Text = "-" + after;
+                    expression = before + "(" + textBox1.Text + ")";
+                }
+
                 UpdateExpressionDisplay();
             }
         }
+
+
 
         private void label1_Click(object sender, EventArgs e)
         {

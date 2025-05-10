@@ -29,6 +29,7 @@
 ### 🔐 Encapsulation
 All calculator logic (state, current expression, and UI behavior) is encapsulated inside the `Form1` class. Fields like `expression`, `resultValue`, and flags like `justEvaluated` are private and managed only through methods.
 
+### 📁 Code Reference:
 ```
 
 private double resultValue = 0;
@@ -40,6 +41,7 @@ private bool justEvaluated = false;
 ```
 These fields are modified using event handlers like:
 
+### 📁 Code Reference:
 ```
 
 private void NumberButton_Click(object sender, EventArgs e)
@@ -56,6 +58,7 @@ All number buttons call NumberButton_Click.
 
 Operators like +, -, ×, ÷ call Operator_Click.
 
+### 📁 Code Reference:
 ```
 
 btn_1.Click += NumberButton_Click;
@@ -67,6 +70,7 @@ This hides implementation detail and allows buttons to behave similarly with min
 
 Also, display alignment logic is abstracted:
 
+### 📁 Code Reference:
 ```
 
 private void UpdateExpressionDisplay()
@@ -76,6 +80,7 @@ private void UpdateExpressionDisplay()
 ### 🧠 Event-Driven Logic
 The calculator registers all button click events at runtime using the `RegisterEvents()` method, ensuring maintainable and scalable code.
 
+### 📁 Code Reference:
 ```
 private void RegisterEvents()
 {

@@ -60,15 +60,31 @@ The calculator registers all button click events at runtime using the `RegisterE
 ## <a id="screenshots">📸 Screenshots</a>
 
 <p align="center">
-  <img src="images/CalculatorUI.png" style="max-width: 600px; height: auto;" alt="MAIN UI...">
+  <img src="images/Initial.png" style="max-width: 600px; height: auto;" alt="Main UI">
 </p>
 
 <p align="center">
-  <img src="images/CalculatorUI.png" style="max-width: 600px; height: auto;" alt="screenshots 1...">
+  <img src="images/Addition.png" style="max-width: 600px; height: auto;" alt="Addition">
 </p>
 
 <p align="center">
-  <img src="images/CalculatorWithExpression.png" style="max-width: 600px; height: auto;" alt="screenshots 2...">
+  <img src="images/Negative-Subtraction.png" style="max-width: 600px; height: auto;" alt="Negative-Subtraction">
+</p>
+
+<p align="center">
+  <img src="images/Multiplication.png" style="max-width: 600px; height: auto;" alt="Multiplication">
+</p>
+
+<p align="center">
+  <img src="images/Division.png" style="max-width: 600px; height: auto;" alt="Division">
+</p>
+
+<p align="center">
+  <img src="images/Division by Zero.png" style="max-width: 600px; height: auto;" alt="Division by Zero">
+</p>
+
+<p align="center">
+  <img src="images/Large Numbers.png" style="max-width: 600px; height: auto;" alt="Large Numbers">
 </p>
 
 ## <a id="members">👥 Group Members</a>
